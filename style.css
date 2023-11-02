@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.report {
+  justify-content: center;
+  height: 1200px;
+  box-shadow: 0 10px 20px #505050;
+  padding: 30px;
+  margin-top: 30px;
+}
+.back-image {
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+.report-title {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 50px;
+  color: white;
+}
+.report-name {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 350px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid black;
+  align-items: center;
+  background-color: white;
+}
+.report-date {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 350px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.report-page-header {
+  display: flex;
+  justify-content: start;
+}
+.report-page-icon {
+  padding-top: 20px;
+  padding-left: 18px;
+  width: 120px;
+  height: 120px;
+  background-color: #0791a3;
+  border-radius: 60px;
+}
+.report-page-title {
+  border-radius: 0px 60px 60px 0px;
+  width: 300px;
+  background-color: #495862;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.back-image {
+  font-size: medium;
+  color: white;
+}
+.bullet-list li {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.number {
+  float: right;
+}
