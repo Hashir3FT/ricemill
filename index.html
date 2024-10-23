@@ -1,179 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <title>Document</title>
-    <script src="js/jquery.min.js"></script>
-  </head>
-  <body>
-    <section class="report" id="contentToPrint">
-      <img class="back-image" src="http://erp.3ftechnologies.net/assets/assets/images/company_logo.png" />
-      <h2>This is for testing</h2>
-      <p>A quick brown fox jump over the lazy dog.</p>
-     <!--  <img class="logo" src="assets/logo.jpg" />
-      <h2 class="report-title">Leadership Report</h2>
-      <div class="report-name">
-        <h2
-          style="text-align: center; vertical-align: middle; line-height: 50px"
-        >
-          Clare X Ample
-        </h2>
-      </div>
-      <div class="report-date">
-        <h2
-          style="text-align: center; vertical-align: middle; line-height: 50px"
-        >
-          17 August 2023
-        </h2>
-      </div>
-    </section>
-    <section class="report">
-      <div class="report-header">
-        <h2>Leadingship Report</h2>
-        <img src="assets/logo.jpg" />
-      </div>
-      <hr style="margin-top: 30px; margin-bottom: 10px" />
-      <div class="report-page-header">
-        <div class="report-page-icon">
-          <img src="assets/content.PNG" />
-        </div>
-        <div class="report-page-title">
-          <h3 style="color: white; font-size: 20px">Contents</h3>
-        </div>
-      </div>
-      <div style="text-align: center">
-        <ul class="bullet-list">
-          <li><span>Executive Summary</span><span class="number">03</span></li>
-          <li><span>Scores By Category</span><span class="number">04</span></li>
-          <li>
-            <span>The Leadership Competencies Overview</span
-            ><span class="number">05</span>
-          </li>
-          <li>
-            <span>Your Sub competencies at a Glance</span
-            ><span class="number">06</span>
-          </li>
-          <li>
-            <span>Leading with Emotional Intelligence</span
-            ><span class="number">07</span>
-          </li>
-          <li>
-            <span>Emotional Intelligence Sub Competencies</span
-            ><span class="number">08</span>
-          </li>
-          <li>
-            <span>Organisational Management</span><span class="number">09</span>
-          </li>
-          <li>
-            <span>Organisational Management Sub Competencies</span
-            ><span class="number">10</span>
-          </li>
-          <li>
-            <span>Communicating Effectively</span><span class="number">11</span>
-          </li>
-          <li>
-            <span>Communicating Effectively Sub Competencies</span
-            ><span class="number">12</span>
-          </li>
-          <li><span>Complex Reasoning</span><span class="number">13</span></li>
-          <li>
-            <span>Complex Reasoning Sub Competencies</span
-            ><span class="number">14</span>
-          </li>
-          <li><span>Morals and Ethics</span><span class="number">15</span></li>
-          <li>
-            <span>Morals and Ethics Sub Competencies</span
-            ><span class="number">16</span>
-          </li>
-          <li><span>Developing People</span><span class="number">17</span></li>
-          <li>
-            <span>Developing People Sub Competencies</span
-            ><span class="number">18</span>
-          </li>
-          <li>
-            <span>Commercial Awareness</span><span class="number">19</span>
-          </li>
-          <li>
-            <span>Commercial Awareness Sub Competencies</span
-            ><span class="number">20</span>
-          </li>
-          <li><span>Collaboration</span><span class="number">21</span></li>
-          <li>
-            <span>Collaboration Sub Competencies</span
-            ><span class="number">22</span>
-          </li>
-          <li><span>Overall Score</span><span class="number">23</span></li>
-          <li><span>Next Steps</span><span class="number">24</span></li>
-          <li><span>Conclusion</span><span class="number">25</span></li>
-        </ul>
-      </div>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-      <hr
-        style="
-          margin-top: 30px;
-          margin-bottom: 10px;
-          background-color: #0791a3;
-          height: 3px;
-        "
-      />
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-      <div class="report-footer">
-        <h4 style="font-weight: 500; font-size: 20px">www.h2advisory.co.uk</h4>
-        <h4 style="font-weight: 700">First Name Last Name</h4>
-      </div> -->
-    </section>
-    <a  href="javascript:void(0)" class="btn-download">Download PDF  </a>
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-    <a  href="html2pdf.html">Working Page</a>
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
 
-    <script src="js/jspdf.debug.js"></script>
-    <script src="js/html2canvas.min.js"></script>
-    <script src="js/html2pdf.min.js"></script>
-    
-    
-    <script>
-    
-        const options = {
-          margin: 0.5,
-          filename: 'invoice.pdf',
-          image: { 
-            type: 'png', 
-            quality: 500
-          },
-          html2canvas: { 
-            scale: 1 
-          },
-          jsPDF: { 
-            unit: 'in', 
-            format: 'letter', 
-            orientation: 'portrait' 
-          }
-        }
-        
-        $('.btn-download').click(function(e){
-          e.preventDefault();
-          const element = document.getElementById('contentToPrint');
-          html2pdf().from(element).set(options).save();
-        });
-    
-    
-        function printDiv(divName) {
-         var printContents = document.getElementById(divName).innerHTML;
-         var originalContents = document.body.innerHTML;
-    
-         document.body.innerHTML = printContents;
-    
-         window.print();
-    
-         document.body.innerHTML = originalContents;
-    }
-        </script>
-    
-  </body>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="rice_mil_flutter">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>rice_mil_flutter</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
 </html>
